@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest House Velina</title>
+
+    <link rel="stylesheet" href="../home.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html">
+            <div class="logo">
+                Guest House </br>
+                Velina
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="#rooms">rooms</a>
+            <a href="#booking-calendar">events</a>
+            <a href="#rules">rules</a>
+        </div>
+    </nav>
+    <main>
+        <section class="banner">
+        </section>
+
+        <section class="description" id="rooms">
+            <div>
+
+                <h2>За Къщата</h2>
+                <p>Къща за гости Велина е 3-етажна стара селска Къща
+                    напълно реновирана, перфектна за семейства или големи групи.
+                    Къщата има 3 двойни стаи, една с две единични легла и 2 разтегателни дивана
+                    Освен това е оборудвана с вътрешна кухня с печка, котлони, кафе машина, хладилник с фризер и съдомялна. 
+                    Къщата има пералня и сушилня, телевизия и Wi fi.Къщата има две тераси и лятна кухня с огнище и мивка
+                    Къщата има баня на всеки етаж. Има голям двор с ограда, подходящ за кучета
+                    Къщата е в село Велика, на 4 километра от плажа. В селото има магазин, а на 7 километра има магазин Lidl.
+                    Има опция да заемете колело и да бъдете взети от летището.
+                </p>
+            </div>
+            <img src="../images/house2.jpg" alt="Velina House" />
+        </section>
+
+        <section class="rooms">
+            <div class="room" onclick="onRoomClick('room1')">
+                Стая 1
+            </div>
+            <div class="room" onclick="onRoomClick('kitchen')">
+                Кухня
+            </div>
+            <div class="room" onclick="onRoomClick('room2')">
+                Стая 2
+            </div>
+
+            <div class="room" onclick="onRoomClick('room3')">
+                Стая 3
+            </div>
+            <div class="room" onclick="onRoomClick('bathroom')">
+                Баня
+            </div>
+        </section>
+
+        <section class="booking-calendar" id="booking-calendar">
+            <h3>Calendar </h3>
+            <section class="days">
+                <div class="day">1</div>
+                <div class="day active-day"></div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day"></div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+            </section>
+        </section>
+
+        <section class="rules" id="rules">
+            <h3>Правила:</h3>
+            <details>
+                <summary>Пушенето вътре е забранено</summary>
+                <p>Пушенето в стаите и в къщата е забранено. Пушенето е разрешено на терасите и извън къщата, като отпадаците следва да се събират и изхвърлят.</p>
+            </details>
+
+            <details>
+                <summary>Домашни любимци до 10 килограма и с хигиени навици са позволени</summary>
+                <p>В къщата са позволени домашни любимци, които са до 10 килограма и имат изградени поведенченски и хигиени навици. Въпреки това трябва да ни уведомите ако планирате да доведете домашния си любимец и сте задължени да носите документация и индетификация за него. При щети те следва да бъдат покрити.</p>
+            </details>
+
+            <details>
+                <summary>Наставяне и напускане на къщата</summary>
+                <p>Настаняването в къщата става след 2 часа следобед, а напускането е до 11 часа сутринта.</p>
+            </details>
+
+            <details>
+                <summary>Силни шумпове и партита.</summary>
+                <p>Ние разбираме че сте на ваканция и имате поводи за празнуване, но ви молим да спазвате закона за високи шумове, който гласи че висока музика </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            Guest House </br>
+            Velina
+        </div>
+        <div class="contact">
+            <span><p>Имейл:</p><p>ntlmarinova@....</p></span>
+            <span><p>Телефон</p><p>+359 8900000</p></span>
+        </div>
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.431930386215!2d10.154177415844224!3d56.13234298065663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c401d57e6192b%3A0x76392e16158adbeb!2sDamagervej%2012B%2C%208260%20Viby!5e0!3m2!1sbg!2sdk!4v1655574642103!5m2!1sbg!2sdk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+
+    <section class="side-menu" id="side-menu">
+        <a href="#rooms">rooms</a>
+        <a href="#booking-calendar">events</a>
+        <a href="#rules">rules</a>
+        <div class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+
+    <section class="room-modal">
+        <img id="close-modal" src="../images/close.png" alt="close" onclick="hideRoomModal()" />
+        <img id="room-preview" src="" alt="room" />
+    </section>
+
+    <section id="booking-modal">
+        <img id="close-booking-modal" src="../images/close.png" alt="close" onclick="hideBookingModal()" />
+
+        <div class="event-info">
+            <div class="event-info-element">
+                <img src="../images/house velina.jpg" />
+                <div class="meta-info">
+                    <p>Date: 25/06/2022</p>
+                    <p>Location: Delvinska 9, et. 2</p>
+                </div>
+                <h3>Plamen RD</h3>
+                <div class="description">She se nadjasame kato jivotni. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod possimus vitae deleniti quos amet ab earum enim laborum dolor deserunt eos provident, et nihil id quis. Eos mollitia commodi nemo!</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../index.js"></script>
+    
+</body>
+</html>

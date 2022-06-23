@@ -1,0 +1,443 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Vivaldi";
+    src: url("./fonts/VIVALDII.TTF");
+}
+
+nav {
+    height: 80px;
+    background-color: #51802F;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    color: white;
+    font-family: "Vivaldi", sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+nav > .nav-links > a {
+    color: white;
+    font-family: 'Signika', sans-serif;
+    font-size: 22px;
+    border-left: 3px solid white;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+nav > .nav-links > a:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    background-image: url('./images/front-picture.png');
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner > h1 {
+    font-size: 50px;
+    color: white;
+    font-family: inherit;
+}
+
+.description {
+    margin-top: 50px;
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    font-family: 'Signika', sans-serif;
+    justify-content: space-around;
+}
+
+.description > img {
+    height: 400px;
+}
+
+.description > div {
+    width: 60%;
+}
+
+.description > div > h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: 'Signika', sans-serif;
+}
+
+.description > div > p {
+    font-size: 15px;
+    width: 70%;
+}
+
+/* Rooms styles */
+
+.rooms {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+    
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.rooms > .room {
+    height: 50px;
+    width: 200px;
+    background-color: #51802f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.room-modal { 
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  display: none;
+}
+
+#close-modal {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: calc(5% + 15px);
+    right: calc(5% + 15px);
+    cursor: pointer;
+}
+
+#room-preview {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    object-fit: cover;
+}
+
+/* Calendar */
+
+.booking-calendar {
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.booking-calendar > h3 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr) ;
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    row-gap: 10px;
+    justify-items: center;
+}
+
+.day {
+    height: 100px;
+    width: 100px;
+    color: black;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #e6ffe3;
+}
+
+.day.active-day {
+    background-color: #db5d51;
+    cursor: pointer;
+}
+
+#booking-modal { 
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  display: none;
+}
+
+#close-booking-modal {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: calc(5% + 15px);
+    right: calc(5% + 15px);
+    cursor: pointer;
+}
+
+.booking-form {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    background-color: #e6ffe3;
+    border-radius: 30px;
+    padding: 100px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.booking-form-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.input-field > label {
+    font-size: 20px;
+}
+
+.input-field > input {
+    padding: 10px;
+    border: 0;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+}
+
+input::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+.booking-form > h3 {
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#submit-button {
+    border: 0;
+    height: 40px;
+    width: 200px;
+    border-radius: 30px;
+    color: white;
+    background-color:#ff8645 ;
+    margin: auto auto 0 auto;
+    cursor: pointer;
+}
+
+/* Side menu */
+
+.side-menu {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.side-menu > a {
+    display: block;
+    padding: 1px 20px;
+    background-color: #FF8645;
+    color: white;
+    text-decoration: none;
+    font-family: 'Signika', sans-serif;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.side-menu > .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100%;
+    padding: 30px;
+    background-color: #FF8645;
+}
+
+.side-menu > .menu > div {
+    width: 40px;
+    height: 12px;
+    margin-bottom: 7px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.side-menu > .menu > div:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Events modal content */
+
+.event-info {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    background-color: #e6ffe3;
+    border-radius: 30px;
+    padding: 100px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.event-info-element {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.event-info-element > img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.event-info-element > .meta-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.event-info-element > .meta-info > p {
+    font-family: 'Signika', sans-serif;
+    opacity: .8;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.event-info-element > h3 {
+    font-size: 32px;
+    font-family: 'Signika', sans-serif;
+    margin-bottom: 15px;
+}
+
+.event-info-element > .description {
+    font-size: 25px;
+    font-family: 'Signika', sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+/* Rules Section */
+
+.rules {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.rules > h3 {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Signika', sans-serif;
+    margin-bottom: 20px;
+}
+
+.rules > details {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.rules > details > summary {
+    font-size: 23px;
+    font-family: 'Signika', sans-serif;
+    margin-bottom: 15px;
+}
+
+.rules > details > p {
+    font-size: 19px;
+    font-family: 'Signika', sans-serif;
+}
+
+/* Footer */
+
+footer {
+    height: 120px;
+    background-color: #51802F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+footer > .logo {
+    width: 20%;
+}
+
+footer > .contact {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .contact > span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+footer > .contact > span > p {
+    font-size: 23px;
+    font-family: 'Signika', sans-serif;
+}
+
+footer > .contact > span > p:first-of-type {
+    font-weight: bold;
+}
+
+footer > .location > iframe {
+    height: 100%;
+}
