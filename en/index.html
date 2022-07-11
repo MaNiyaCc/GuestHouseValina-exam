@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
 
     <link rel="stylesheet" href="../home.css">
 </head>
+
 <body>
-    <nav>
+    <nav id="navbar">
         <a href="../index.html">
             <div class="logo">
                 Guest House </br>
@@ -30,26 +32,36 @@
             <div>
 
                 <h2>House Description</h2>
-                <p>Guest house Velina is an old town house in the seaside 
-                    village Velika. The house is completely renovated, 
-                    ready to welcome guests from all around the world. 
+                <p>Guest house Velina is an old town house in the seaside
+                    village Velika. The house is completely renovated,
+                    ready to welcome guests from all around the world.
                     The three stores house has 4 bedrooms, living room, kitchen,
                     3 bathrooms,small yard and a summer kitchen.
-                     It is perfect for big groups or families. 
-                    The nearest beach is within 5 minutes drive, in village Lozenetz. 
-                    There you can also find supermarkets, greens market, 
+                    It is perfect for big groups or families.
+                    The nearest beach is within 5 minutes drive, in village Lozenetz.
+                    There you can also find supermarkets, greens market,
                     bars and restaurants.The house is surrounded by beautiful forrest,
                     perfect for walks, when the heat is unbearable.
-                    The house is located in village Velika, a beautiful small village on the entrance of a forrest, that 
+                    The house is located in village Velika, a beautiful small village on the entrance of a forrest, that
                     combines the beauty of the mountains and the chilly and sunny feeling of the seaside</p>
             </div>
             <img src="../images/house2.jpg" alt="Velina House" />
         </section>
 
         <section class="rooms">
-            <div class="room" onclick="onRoomClick('room1')">
-                Room 1
+            <button id="myBtn1">floor 1</button>
+            <div id="floor1" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Some text in the Modal..</p>
+                </div>
+
             </div>
+            <!-- <div class="room" onclick="onRoomClick('room1')">
+                Room 1
+            </div> -->
             <div class="room" onclick="onRoomClick('kitchen')">
                 Kitchen
             </div>
@@ -57,11 +69,11 @@
                 Room 2
             </div>
 
-            <div class="room"  onclick="onRoomClick( 'room3' )">
+            <div class="room" onclick="onRoomClick( 'room3' )">
                 Room 3
             </div>
-            <div class="room"  onclick="onRoomClick( 'bathroom' )">
-                Bathroom 
+            <div class="room" onclick="onRoomClick( 'bathroom' )">
+                Bathroom
             </div>
         </section>
 
@@ -107,25 +119,33 @@
             <h3>Rules:</h3>
             <details>
                 <summary>Don't smoke inside</summary>
-                <p>Smoking in the rooms and in the house is forbidden. If you smoke anywhere inside the house, you will be fined and your reservation will be terminated without refund.
-                    Smoking is permitted on the outside areas and on the balcony and you are obligated to clean after yourself. Any damage would be fined.
+                <p>Smoking in the rooms and in the house is forbidden. If you smoke anywhere inside the house, you will
+                    be fined and your reservation will be terminated without refund.
+                    Smoking is permitted on the outside areas and on the balcony and you are obligated to clean after
+                    yourself. Any damage would be fined.
                 </p>
             </details>
 
             <details>
                 <summary>Only pets under 10 kg and with established hygiene are allowed </summary>
-                <p>You are incouraged to bring your pet to the house as long as you email the owner in advance providing information about the pet. Your pet should also have established hygiene and behaviour habits. If there is any damage made by it, you will have to pay for the repairment.</p>
+                <p>You are incouraged to bring your pet to the house as long as you email the owner in advance providing
+                    information about the pet. Your pet should also have established hygiene and behaviour habits. If
+                    there is any damage made by it, you will have to pay for the repairment.</p>
             </details>
 
             <details>
                 <summary>Check in and check out rules.</summary>
-                <p>You can check in the house first after 14 o'clock as general hotel rule. You are obligated to check out of the house before 11 o'clock. With any change you MUST inform us by email.</p>
+                <p>You can check in the house first after 14 o'clock as general hotel rule. You are obligated to check
+                    out of the house before 11 o'clock. With any change you MUST inform us by email.</p>
             </details>
-            
+
             <details>
                 <summary>Parties and loud noises</summary>
-                <p>We understand you are on vacation and you might want to celebrate by throwing a party or listening to loud music. However we ask you to obey the Bulgarian law for loud noises and keep it down after 23 o'clock.
-                    We politely ask you also to respect also the time between 14 and 16, especially on the weekends as this is common time for bulgarian people to rest.
+                <p>We understand you are on vacation and you might want to celebrate by throwing a party or listening to
+                    loud music. However we ask you to obey the Bulgarian law for loud noises and keep it down after 23
+                    o'clock.
+                    We politely ask you also to respect also the time between 14 and 16, especially on the weekends as
+                    this is common time for bulgarian people to rest.
                 </p>
             </details>
         </section>
@@ -137,24 +157,22 @@
             Velina
         </div>
         <div class="contact">
-            <span><p>Email:</p><p>ntlmarinova@....</p></span>
-            <span><p>Phone</p><p>+359 8900000</p></span>
+            <span>
+                <p>Email:</p>
+                <p>ntlmarinova@....</p>
+            </span>
+            <span>
+                <p>Phone</p>
+                <p>+359 8900000</p>
+            </span>
         </div>
         <div class="location">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13620.154206739764!2d27.77751747252893!3d42.179001930218675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a12d5ae42dde69%3A0xaa17ed02ca649abf!2sVelina%20house!5e0!3m2!1sbg!2sdk!4v1655991106438!5m2!1sbg!2sdk"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13620.154206739764!2d27.77751747252893!3d42.179001930218675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a12d5ae42dde69%3A0xaa17ed02ca649abf!2sVelina%20house!5e0!3m2!1sbg!2sdk!4v1655991106438!5m2!1sbg!2sdk"></iframe>
         </div>
     </footer>
 
-    <section class="side-menu" id="side-menu">
-        <a href="#rooms">rooms</a>
-        <a href="#booking-calendar">events</a>
-        <a href="#rules">rules</a>
-        <div class="menu">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </section>
+
 
     <section class="room-modal">
         <img id="close-modal" src="../images/close.png" alt="close" onclick="hideRoomModal()" />
@@ -198,15 +216,19 @@
                     <p>Location: The bay in Tsarevo</p>
                 </div>
                 <h3>The festival of the Fish</h3>
-                <div class="description">The fish festival in Tsarevo is an anual event, gathering people from all around the country. 
-                    It starts at noon and offers fun for young and old with a carnaval, live band, fish soup cook out with one of the most famous chefs in Bulgaria-Uti Bachvarov.
-                    There everyone can taste the best seafood meals, experience bulgarian culture and hospitality and create long lasting memories.
+                <div class="description">The fish festival in Tsarevo is an anual event, gathering people from all
+                    around the country.
+                    It starts at noon and offers fun for young and old with a carnaval, live band, fish soup cook out
+                    with one of the most famous chefs in Bulgaria-Uti Bachvarov.
+                    There everyone can taste the best seafood meals, experience bulgarian culture and hospitality and
+                    create long lasting memories.
                 </div>
             </div>
         </div>
     </section>
 
     <script src="../index.js"></script>
-    
+
 </body>
+
 </html>
