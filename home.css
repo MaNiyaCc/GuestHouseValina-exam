@@ -4,6 +4,39 @@
     padding: 0;
 }
 
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
 @font-face {
     font-family: "Vivaldi";
     src: url("./fonts/VIVALDII.TTF");
@@ -97,7 +130,7 @@ nav > .nav-links > a:hover {
     justify-content: space-between;
     align-items: center;
     margin: 100px auto;
-    
+
     flex-wrap: wrap;
     row-gap: 30px;
 }
@@ -115,7 +148,7 @@ nav > .nav-links > a:hover {
     cursor: pointer;
 }
 
-.room-modal { 
+.room-modal {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -182,7 +215,7 @@ nav > .nav-links > a:hover {
     cursor: pointer;
 }
 
-#booking-modal { 
+#booking-modal {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -248,7 +281,7 @@ input::placeholder {
     color: white;
     opacity: 1; /* Firefox */
   }
-  
+
 input:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: white;
 }
@@ -440,4 +473,87 @@ footer > .contact > span > p:first-of-type {
 
 footer > .location > iframe {
     height: 100%;
+}
+
+ /* Modal Header */
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        /* Modal Body */
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        /* Modal Footer */
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        /* Add Animation */
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
