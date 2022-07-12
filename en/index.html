@@ -8,6 +8,13 @@
     <title>Guest House Velina</title>
 
     <link rel="stylesheet" href="../home.css">
+    <!-- CSS for full calender -->
+    <link href="https://fullcalendar.io/js/fullcalendar-3.8.2/fullcalendar.min.css" rel="stylesheet" />
+    <!-- JS for jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- JS for full calender -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js"></script>
 </head>
 
 <body>
@@ -20,17 +27,34 @@
         </a>
         <div class="nav-links">
             <a href="#rooms">rooms</a>
-            <a href="#booking-calendar">events</a>
+            <a href="#calendar">events</a>
             <a href="#rules">rules</a>
         </div>
     </nav>
     <main>
-        <section class="banner">
-        </section>
+
+        <div class="wrap">
+            <div id="slider">
+                <div class="slide slide1">
+                    <div class="slide-content">
+                        <span>Image One</span>
+                    </div>
+                </div>
+                <div class="slide slide2">
+                    <div class="slide-content">
+                        <span>Image Two</span>
+                    </div>
+                </div>
+                <div class="slide slide3">
+                    <div class="slide-content">
+                        <span>Image Three</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="description" id="rooms">
             <div>
-
                 <h2>House Description</h2>
                 <p>Guest house Velina is an old town house in the seaside
                     village Velika. The house is completely renovated,
@@ -47,21 +71,23 @@
             </div>
             <img src="../images/house2.jpg" alt="Velina House" />
         </section>
+        <div class="date-picker">
+            <div class="selected-date"></div>
 
-        <section class="rooms">
-            <button id="myBtn1">floor 1</button>
-            <div id="floor1" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
+            <div class="dates">
+                <div class="month">
+                    <div class="arrows prev-mth">&lt;</div>
+                    <div class="mth"></div>
+                    <div class="arrows next-mth">&gt;</div>
                 </div>
 
+                <div class="days"></div>
             </div>
-            <!-- <div class="room" onclick="onRoomClick('room1')">
-                Room 1
-            </div> -->
+        </div>
+        <section class="rooms">
+            <div class="room" onclick="onRoomClick('kitchen')">Click me</div>
+
+
             <div class="room" onclick="onRoomClick('kitchen')">
                 Kitchen
             </div>
@@ -77,7 +103,9 @@
             </div>
         </section>
 
-        <section class="booking-calendar" id="booking-calendar">
+        <div id="calendar"></div>
+
+        <!-- <section class="booking-calendar" id="booking-calendar">
             <h3>Calendar for events</h3>
             <section class="days">
                 <div class="day"></div>
@@ -113,7 +141,7 @@
                 <div class="day"></div>
                 <div class="day"></div>
             </section>
-        </section>
+        </section> -->
 
         <section class="rules" id="rules">
             <h3>Rules:</h3>
@@ -174,6 +202,7 @@
 
 
 
+
     <section class="room-modal">
         <img id="close-modal" src="../images/close.png" alt="close" onclick="hideRoomModal()" />
         <img id="room-preview" src="" alt="room" />
@@ -228,6 +257,28 @@
     </section>
 
     <script src="../index.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#calendar').fullCalendar({
+                defaultView: 'month',
+                events: [
+                    {
+                        title: 'Divyesh Birthday',
+                        start: '2022-08-21' // change with current date
+
+                    },
+                    {
+                        title: 'Roshni Birthday',
+                        start: '2022-08-11'
+                    },
+                    {
+                        title: 'Shinerweb website renewal',
+                        start: '2022-08-09'
+                    }
+                ]
+            });
+        });
+    </script>
 
 </body>
 
