@@ -22,6 +22,20 @@ const onRoomClick = (roomName) => {
     }
   }
 }
+const showFloorModal = (src) => {
+  const  imageSlider = document.getElementById("floor-slider");
+  const modal = document.getElementsByClassName("floor-modal")[0];
+  let i;
+  let slides = document.querySelectorAll('.floor-slide');
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+
+  }
+
+  modal.style.display = 'flex';
+  document.body.style.overflowY = 'hidden';
+
+}
 
 const showRoomModal = (src) => {
   // We get the image of the room and the modal
@@ -35,9 +49,10 @@ const showRoomModal = (src) => {
   document.body.style.overflowY = 'hidden';
 }
 window.onclick = function (event) {
-  const modal = document.getElementsByClassName("room-modal")[0];
+  const modal = document.getElementsByClassName("room-modal"||"floor-modal")[0];
   if (event.target == modal) {
     modal.style.display = "none";
+    document.body.style.overflowY = 'scroll';
   }
 }
 const hideRoomModal = () => {
@@ -93,6 +108,8 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
 let slideIndex = 0;
 showSlides();
 
@@ -105,7 +122,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1 }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 20000); // Change image every 2 seconds
 }
 
 document.addEventListener('DOMContentLoaded', function () {
