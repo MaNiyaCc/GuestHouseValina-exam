@@ -1,7 +1,7 @@
 const onRoomClick = (roomName) => {
   switch (roomName) {
-    case 'room1': {
-      showRoomModal('../images/room1.jpg')
+    case 'floor1': {
+      showRoomModal('../images/buttons/')
       break;
     }
     case 'room2': {
@@ -17,7 +17,7 @@ const onRoomClick = (roomName) => {
       break;
     }
     case 'bathroom': {
-      showRoomModal('../images/bathroom1.jpg')
+      showRoomModal('../images/Outside1.jpg')
       break;
     }
   }
